@@ -1,6 +1,6 @@
 def decorator(func):
     def wrapper(*args, **kwargs):
-        print("I'm befor the function call!")
+        print("I'm before the function call!")
         func(*args, **kwargs)
         print("I'm after the function call!")
     return wrapper
