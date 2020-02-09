@@ -1,3 +1,6 @@
+# GRAPH 1
+###############################
+
 %matplotlib inline
 import matplotlib.pyplot as plt
 
@@ -17,3 +20,28 @@ with open('./data/names.csv', 'r') as file:
 
 plt.plot(xs, ys)
 plt.show()
+
+
+# GRAPH 2
+#################################
+
+NAME = 'Max'
+GENDER = 'M'
+STATE = 'CA'
+YEAR_FROM = 1950
+YEAR_TO = 2000
+
+x = []
+y = []
+
+with open('./names.csv', 'r') as file:
+    file.readline()
+    for line in file:
+        line_splitted = line.strip().split(',')
+        if (int(line_splitted[2]) >= YEAR_FROM and int(line_splitted[2]) <= YEAR_TO and line_splitted[1] == NAME
+            and line_splitted[3] == GENDER and line_splitted[4] == STATE):
+            x.append(int(line_splitted[2]))
+            y.append(int(line_splitted[5]))
+plt.plot(x, y)
+plt.show()
+    
