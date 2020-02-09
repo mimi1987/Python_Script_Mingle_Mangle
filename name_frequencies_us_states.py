@@ -35,7 +35,7 @@ x = []
 y = []
 
 with open('./names.csv', 'r') as file:
-    file.readline()
+    file.readline() # To get rid of the header.
     for line in file:
         line_splitted = line.strip().split(',')
         if (int(line_splitted[2]) >= YEAR_FROM and int(line_splitted[2]) <= YEAR_TO and line_splitted[1] == NAME
