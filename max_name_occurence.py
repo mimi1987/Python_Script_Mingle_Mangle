@@ -1,6 +1,3 @@
-%matplotlib inline
-import matplotlib.pyplot as plt
-
 name_frequency = {}
 
 with open('./names.csv', 'r') as file:
