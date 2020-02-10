@@ -7,7 +7,7 @@ with open('./names.csv', 'r') as file:
         if line_splitted[1] in name_frequency:
             name_frequency[line_splitted[1]] += int(line_splitted[5])
         else:
-            name_frequency[line_splitted[1]] = 1
+            name_frequency[line_splitted[1]] = int(line_splitted[5])
 
 max_occurence = 0
 name_max = ''
